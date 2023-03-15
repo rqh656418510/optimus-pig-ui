@@ -152,3 +152,51 @@ mvn spring-javaformat:apply
 2. 欢迎提交 [issue](https://gitee.com/log4j/pig/issues)，请写清楚遇到问题的原因、开发环境、复显步骤。
 
 3. 联系作者 <a href="mailto:pig4cloud@qq.com">pig4cloud@qq.com</a>
+
+### 合并上游代码
+
+- 第一步，指定上游分支
+
+``` sh
+# 指定上游分支
+$ git remote add upstream https://github.com/pig-mesh/pig-ui.git
+```
+
+- 第二步，更新master分支的代码
+
+``` sh
+# 切换到本地的master分支
+$ git checkout master
+
+# 拉取上游代码
+$ git fetch upstream
+
+# 合并上游master分支的代码
+$ git merge upstream/master
+
+# 提交本地master分支的代码
+$ git push origin master
+```
+
+- 第三步，更新optimus分支的代码
+
+``` sh
+# 切换到本地的optimus分支
+$ git checkout optimus
+
+# 合并本地master分支的代码
+$ git merge master
+
+# 提交本地optimus分支的代码
+$ git push origin optimus
+```
+
+- 第四步，编译项目
+
+``` sh
+# 切换根用户
+$ su root
+
+# 编译项目
+$ npm run build
+```
