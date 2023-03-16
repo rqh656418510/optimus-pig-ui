@@ -197,6 +197,6 @@ $ git push origin optimus
 # 切换根用户
 $ su root
 
-# 编译项目
+# 编译项目（要求使用 node-v16.17.0）
 $ npm run build
 ```
